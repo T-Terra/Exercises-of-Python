@@ -1,0 +1,5 @@
+print('==== DESAFIO 013 ====')
+salario = float(input('qual é seu salário? R$'))
+#aumento = salario + (salario * 4.1/100)
+aumento = salario + (salario * 15/100)
+print(f'o seu salário atual é de R${salario:.2f}, com o aumento de 15% ganhará R${aumento:.2f}')
