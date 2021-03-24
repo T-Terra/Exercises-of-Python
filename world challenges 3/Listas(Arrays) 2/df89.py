@@ -1,17 +1,27 @@
-main_list = [[], []]
+from time import sleep
+main_list = []
 response = 'S'
 
 while response == 'S':
     name = str(input('Nome: '))
     note1 = float(input('Nota 1: '))
     note2 = float(input('Nota 2: '))
+    media = (note1 + note2) / 2
+    main_list.append([name, [note1, note2], media])
     response = str(input('Quer continuar? [S/N]: '))[0].upper()
-    main_list[0].append(name)
-    main_list[1].append(note1)
-    main_list[1].append(note2)
-    media = sum(main_list[1]) / len(main_list[1]) # sum --> the sum of all items divided by the size of the array
-    for k, v in enumerate(main_list[0]):
-        print(20 * '-=')
-        print(f'NO.  NOME       MEDIA')
-        print(f'{k}    {v}     {media}')
-        print(15 * '-')
+print(30 * '-=')
+print(f'{"NO.":<4}{"NOME":<10}{"MEDIA":>8}')
+print(30 * '_')
+for i, a in enumerate(main_list):
+    print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}')
+while True:
+    print(35 * '-')
+    menu = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
+    if menu == 999:
+        print('Finalizando...')
+        sleep(2)
+        break
+    elif menu <= len(main_list) -1:
+        print(f'Notas de {main_list[menu][0]} são {main_list[menu][1]}')
+print('Volte sempre!!!')
+    
