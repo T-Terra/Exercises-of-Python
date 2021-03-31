@@ -1,6 +1,6 @@
 people = {}
 crowd = []
-added = Average = 0 
+added = average = 0 
 
 while True:
     people.clear()
@@ -22,8 +22,8 @@ while True:
         break
 print(30 * '-=')
 print(f'A) Ao todo temos {len(crowd)} pessoas cadastradas.')
-Average = added / len(crowd)
-print(f'B) A média de idade é de {Average:5.2f} anos.')
+average = added / len(crowd)
+print(f'B) A média de idade é de {average:5.2f} anos.')
 print(f'C) As mulheres cadastradas foram: ', end='')
 for p in crowd:
     if p['genre'] in 'Ff':
@@ -31,7 +31,7 @@ for p in crowd:
 print()
 print(f'D) Lista das pessoas que estão acima da média: ')
 for p in crowd:
-    if p['age'] >= Average:
+    if p['age'] >= average:
         print('   ', end='')
         for k, v in p.items():
             print(f'{k} = {v}; ', end='')
