@@ -1,25 +1,39 @@
-main_dict = {}
-cont = 0
-average = []
-people = []
-genre = []
+people = {}
+crowd = []
+added = Average = 0 
+
 while True:
-    people.append(str(input('Nome: ')))
-    main_dict['name'] = people
-    genre.append(str(input('Sexo: [M/F] '))[0].upper())
-    main_dict['genre'] = genre
-    average.append(int(input('Idade: ')))
-    m = sum(average) / len(average)
-    main_dict['age'] = average
-    cont += 1
-    response = str(input('Quer continuar? [S/N] '))[0].upper()
+    people.clear()
+    people['name'] = str(input('Nome: '))
+    while True:
+        people['genre'] = str(input('Sexo: [M/F] ')).upper()[0]
+        if people['genre'] in 'MF':
+            break
+        print('ERRO! Por favor, digite apenas M ou F.')
+    people['age'] = int(input('Idade: '))
+    added += people['age']
+    crowd.append(people.copy())
+    while True:
+        response = str(input('Quer continuar? [S/N] ')).upper()[0]
+        if response in 'SN':
+            break
+        print('ERRO! Responda apenas S ou N.')
     if response == 'N':
         break
 print(30 * '-=')
-print(main_dict)
-print(f'  - O grupo tem {cont} pessoas.')
-print(f'  - A média de idade é de {m} anos.')
-#print(f'  - As mulheres cadastradas foram:')
-
-
-            
+print(f'A) Ao todo temos {len(crowd)} pessoas cadastradas.')
+Average = added / len(crowd)
+print(f'B) A média de idade é de {Average:5.2f} anos.')
+print(f'C) As mulheres cadastradas foram: ', end='')
+for p in crowd:
+    if p['genre'] in 'Ff':
+        print(f'{p["name"]}', end='')
+print()
+print(f'D) Lista das pessoas que estão acima da média: ')
+for p in crowd:
+    if p['age'] >= Average:
+        print('   ', end='')
+        for k, v in p.items():
+            print(f'{k} = {v}; ', end='')
+        print()
+print('<< ENCERRADO >>')
