@@ -20,4 +20,8 @@ while True:
         break
 print(30 * '-=')
 print(f'cod  nome          gols         total')
+for i, v in enumerate(list_m):
+    print(f'{i} {v}')
 print(30 * '-')
+
+# O total está com bug || arrumar a soma dos gols 
