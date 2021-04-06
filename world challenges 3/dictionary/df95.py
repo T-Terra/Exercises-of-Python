@@ -8,7 +8,8 @@ while True:
     for c in range(1, match + 1):
         goals.append(int(input(f'Quantos gols na partida {c}°: ')))
         main_dict['goals'] = goals[:]
-        main_dict['tot'] = sum(goals[c])
+        main_dict['tot'] = sum(goals)
+    goals.clear()
     list_m.append(main_dict.copy())
     while True:
         response = str(input('Quer continuar? [S/N] ')).upper()[0]
@@ -23,4 +24,4 @@ for i, v in enumerate(list_m):
     print(f'{i} {v}')
 print(30 * '-')
 
-# O total está com bug || arrumar a soma dos gols 
+# Printar de uma forma melhor || Fazer a opção de ver dados de jogadores separadamente
