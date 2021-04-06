@@ -1,7 +1,6 @@
 main_dict = dict()
-goals = []
+goals = list()
 list_m = list()
-
 while True:
     main_dict.clear()
     main_dict['name'] = str(input('Nome do jogador: '))
@@ -9,7 +8,7 @@ while True:
     for c in range(1, match + 1):
         goals.append(int(input(f'Quantos gols na partida {c}°: ')))
         main_dict['goals'] = goals[:]
-        main_dict['tot'] = sum(goals)
+        main_dict['tot'] = sum(goals[c])
     list_m.append(main_dict.copy())
     while True:
         response = str(input('Quer continuar? [S/N] ')).upper()[0]
