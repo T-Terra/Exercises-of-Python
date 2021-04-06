@@ -43,4 +43,3 @@ while True:
             print(f'   No jogo {i+1}° fez {g} gols.')
         print(40 * '-')
 print('Volte sempre!')
-# Fazer a opção de ver dados de jogadores separadamente
