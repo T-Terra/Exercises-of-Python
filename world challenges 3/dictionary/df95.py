@@ -24,5 +24,12 @@ print(30 * '-')
 for i, v in enumerate(list_m):
     print(f' {i:<3} {v["name"]} {v["goals"]} {v["tot"]}')
 print(30 * '-')
-
+while True:
+    date_player = int(input('Mostrar dados de qual jogador? (999 para parar): '))
+    print(f'  -- LEVANTAMENTO DO JOGADOR {v["name"]}: ')
+    if date_player == i:
+        for cont in range(1, match + 1):
+            print(f'  No jogo {cont} fez {} gols.')
+    if date_player == 999:
+        break
 # Fazer a opção de ver dados de jogadores separadamente
