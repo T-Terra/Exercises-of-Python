@@ -20,8 +20,9 @@ while True:
         break
 print(30 * '-=')
 print(f'cod  nome          gols         total')
+print(30 * '-')
 for i, v in enumerate(list_m):
-    print(f'{i} {v}')
+    print(f' {i:<3} {v["name"]} {v["goals"]} {v["tot"]}')
 print(30 * '-')
 
-# Printar de uma forma melhor || Fazer a opção de ver dados de jogadores separadamente
+# Fazer a opção de ver dados de jogadores separadamente
