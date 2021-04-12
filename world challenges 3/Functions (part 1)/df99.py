@@ -1,20 +1,23 @@
 from time import sleep
 
 def bigger(*num):
-    tam = len(num)
-    max_n = max(num)
-    for c in num:
-        sleep(0.5)
-        print(f'{c}', end=' ')
-    if num == 0:
-        num = 0
-    print(f'Foram informados {tam} valores ao todo.')
-    print(f'O maior número informado foi {max_n}')
+    cont = bigger = 0
     print(30 * '-=')
+    print('Analisando os valores passados...')
+    for value in num:
+        print(f'{value}', end=' ')
+        sleep(0.4)
+        if cont == 0:
+            bigger = value
+        else:
+            if value > bigger:
+                bigger = value
+        cont += 1
+    print(f'Foram informados {cont} valores ao todo.')
+    print(f'O maior número informado foi {bigger}')
         
 # main program
-print(30 * '-=')
-print('Analisando os valores passados...')
 bigger(2, 9, 4, 5, 7, 1)
-bigger(2, 5, 11)
-bigger(0)
+bigger(2, 5, 11, 6)
+bigger(55, 101, 3)
+bigger()
