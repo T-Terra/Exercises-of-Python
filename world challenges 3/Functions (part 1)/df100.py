@@ -2,7 +2,7 @@ from random import randint
 from time import sleep
 # function to sorted numbers
 def numbers(mainlist):
-    print(f'Sorteando 5 valores da lista:', end=' ')
+    global cont
     for cont in range(0, 5):
         n = randint(1, 10)
         mainlist.append(n)
@@ -19,6 +19,8 @@ def sum_tot(mainlist):
     print(f'Somando os valores pares de {main_list} , temos {sum_finish}')
 
 # main program
+cont = 5
+print(f'Sorteando {cont} valores da lista:', end=' ')
 main_list = []
 numbers(main_list)
 sum_tot(main_list)
