@@ -1,3 +1,4 @@
+# Function to vote
 def vote(year_c=0):
     from datetime import date
     global age
