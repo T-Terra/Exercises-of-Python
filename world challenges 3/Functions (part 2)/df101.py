@@ -1,9 +1,8 @@
 # Function to vote
 def vote(year_c=0):
     from datetime import date
-    global age
     current_year = date.today().year
-    age_f = current_year - age
+    age_f = current_year - year_c
     if age_f < 16:
         return f'Com {age_f} anos: NÃO VOTA!'
     elif 16 <= age_f < 18 or age_f >= 65:
