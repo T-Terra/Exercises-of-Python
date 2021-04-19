@@ -1,4 +1,5 @@
 def readint(n=0):
+    print(30 * '-')
     n = str(input(n))
     if n.isnumeric():
         return n
