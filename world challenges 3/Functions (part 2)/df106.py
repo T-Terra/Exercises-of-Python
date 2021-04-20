@@ -12,17 +12,17 @@ def terminal(com):
     sleep(1)
     write(f'Acessando o manual do comando \'{com}\'', 4)
     sleep(1.5)
-    print(c[6], end='')
+    print(c[6])
     help(com)
-    print(c[0], end='')
+    print(c[0])
 
 def write(msg, color=0):
     tam = len(msg) + 4
-    print(c[color], end='')
+    print(c[color])
     print(tam * '~')
     print(f'  {msg}')
     print(tam * '~')
-    print(c[0], end='')
+    print(c[0])
     
 
 # main program
