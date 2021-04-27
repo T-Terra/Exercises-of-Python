@@ -9,5 +9,5 @@ def aumentar(p, quant):
     return percent
 
 def diminuir(p, quant):
-    pcent = p - (p*quant / 100)
-    return pcent
+    percent = p - (p*quant / 100)
+    return percent
