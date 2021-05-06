@@ -1,34 +1,28 @@
-def readint(msg=0):
-    ok = False
-    value = 0
+def readint(msg):
     while True:
-        n = str(input(msg))
         try:
-            value = int(n)
-            ok = True
+            n = int(input(msg))
         except (ValueError, TypeError):
             print('\33[31m''ERRO! Digite um número inteiro válido.''\33[0m')
-        except KeyboardInterrupt:
-            print('\33[31m''O usuário preferiu não informar os dados''\33[0m')
-        if ok:
-            break
-    return value
+            continue
+        except (KeyboardInterrupt):
+            print('\33[31m''\nO usuário preferiu não informar os dados''\33[0m')
+            return 0
+        else:
+            return n
 
-def readfloat(msg=0):
-    ok = False
-    value = 0
+def readfloat(msg):
     while True:
-        n = str(input(msg))
         try:
-            value = float(n)
-            ok = True
+            n = float(input(msg))
         except (ValueError, TypeError):
             print('\33[31m''ERRO! Digite um número real válido.''\33[0m')
-        except KeyboardInterrupt:
-            print('\33[31m''O usuário preferiu não informar os dados''\33[0m')
-        if ok:
-            break
-    return value
+            continue
+        except (KeyboardInterrupt):
+            print('\33[31m''\nO usuário preferiu não informar os dados''\33[0m')
+            return 0
+        else:
+            return n
 
 # main program
 numb = readint('Digite um número inteiro: ')
