@@ -16,9 +16,9 @@ def cadastro():
     name = str(input('Nome: '))
     age = int(input('Idade: '))
     print(f'Novo registro de {name} adicionado.')
-    with open('registros.txt', 'w', newline='') as file:
+    with open('registros.txt', 'a') as file:
         name = file.write(f'{name} ')
-        age = file.write(str(f'{age}'))
+        age = file.write(str(f'{age} \n'))
         
     #with open('registros.txt', 'r') as file:
 
