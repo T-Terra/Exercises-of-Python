@@ -1,3 +1,6 @@
+from os import terminal_size
+
+
 def title(msg):
     tam = len(msg) + 24
     print(tam * '-')
@@ -10,4 +13,12 @@ def menu(msg):
     print(tam * '-')
 
 def cadastro():
-    return 0
+    name = str(input('Nome: '))
+    age = int(input('Idade: '))
+    print(f'Novo registro de {name} adicionado.')
+    with open('registros.txt', 'w', newline='') as file:
+        name = file.write(f'{name} ')
+        age = file.write(str(f'{age}'))
+        
+    #with open('registros.txt', 'r') as file:
+
