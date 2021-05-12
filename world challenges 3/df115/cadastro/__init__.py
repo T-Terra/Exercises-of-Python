@@ -19,6 +19,9 @@ def cadastro():
     with open('registros.txt', 'a') as file:
         name = file.write(f'{name} ')
         age = file.write(str(f'{age} \n'))
+    with open('registros.txt', 'r') as file:
+        for content in file:
+            print(content)
         
     #with open('registros.txt', 'r') as file:
 
