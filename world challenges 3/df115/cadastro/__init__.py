@@ -1,6 +1,3 @@
-from os import terminal_size
-
-
 def title(msg):
     print(50 * '-')
     print(f'{msg}'.center(50))
@@ -16,12 +13,9 @@ def cadastro():
     print(f'Novo registro de {name} adicionado.')
     with open('registros.txt', 'a') as file:
         name = file.write(f'{name} ')
-        age = file.write(str(f'{age} \n'))
+        age = file.write(str(f'{age} anos\n'.rjust(35)) )
 def mostra_p():
     with open('registros.txt', 'r') as file:
         for content in file:
-            print(content)
-
-        
-    #with open('registros.txt', 'r') as file:
-
+            print(end='')
+            print(f'{content}')
