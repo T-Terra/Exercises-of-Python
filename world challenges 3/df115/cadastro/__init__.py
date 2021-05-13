@@ -17,5 +17,4 @@ def cadastro():
 def mostra_p():
     with open('registros.txt', 'r') as file:
         for content in file:
-            print(end='')
             print(f'{content}')
