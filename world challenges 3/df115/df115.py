@@ -11,6 +11,7 @@ while True:
         continue
     except (KeyboardInterrupt):
         print('\33[31m''\nO usuário preferiu não informar os dados''\33[0m')
+        title('Saindo do sistema... Até logo!')
         break
     else:
         if resp == 1:
@@ -22,3 +23,5 @@ while True:
         elif resp == 3:
             title('Saindo do sistema... Até logo!')
             break
+        elif resp > 3:
+            print('\33[31m''ERRO! Digite uma opção válida!''\33[0m')
