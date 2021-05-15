@@ -1,12 +1,3 @@
-def title(msg):
-    print(50 * '-')
-    print(f'{msg}'.center(50))
-    print(50 * '-')
-
-def menu(msg):
-    print(f'{msg}')
-    print(50 * '-')
-
 def cadastro():
     name = str(input('Nome: ')).strip()
     age = int(input('Idade: '))
@@ -18,3 +9,27 @@ def mostra_p():
     with open('registros.txt', 'r') as file:
         for content in file:
             print(f'{content}')
+
+
+
+    """try:
+        resp = int(input('\33[33m''Sua opção: ''\33[0m'))
+    except (ValueError, TypeError):
+        print('\33[31m''ERRO! Digite um número inteiro válido.''\33[0m')
+        continue
+    except (KeyboardInterrupt):
+        print('\33[31m''\nO usuário preferiu não informar os dados''\33[0m')
+        title('Saindo do sistema... Até logo!')
+        break
+    else:
+        if resp == 1:
+            title('PESSOAS CADASTRADAS')
+            mostra_p()
+        elif resp == 2:
+            title('NOVO CADASTRO')
+            cadastro()
+        elif resp == 3:
+            title('Saindo do sistema... Até logo!')
+            break
+        elif resp > 3:
+            print('\33[31m''ERRO! Digite uma opção válida!''\33[0m')"""
